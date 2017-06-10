@@ -26,69 +26,105 @@
                 <th>星期六</th>
                 <th>星期日</th>
             </tr>
-            <tbody>
-                <tr>
-                    <th>第一节</th>
-                    <td rowspan="2">语文</td>
-                    <td>数学</td>
-                    <td>政治</td>
-                    <td>英语</td>
-                    <td>化学</td>
-                    <td rowspan="5">自习</td>
-                    <td rowspan="5">休息</td>
-                </tr>
-                <tr>
-                    <th>第二节</th>
-                    <td colspan="2">生物</td>
-                    <td>化学</td>
-                    <td>体育</td>
-                </tr>
-                <tr>
-                    <th>中午</th>
-                    <td colspan="5">休息</td>
-                </tr>
-                <tr>
-                    <th>第三节</th>
-                    <td colspan="2">数学</td>
-                    <td>物理</td>
-                    <td>生物</td>
-                    <td>化学</td>
-                </tr>
-                <tr>
-                    <th>第四节</th>
-                    <td>物理</td>
-                    <td>化学</td>
-                    <td>音乐</td>
-                    <td>美术</td>
-                    <td>政治</td>
-                </tr>
-            </tbody>
         </thead>
+        <tbody>
+            <tr>
+                <th>第一节</th>
+                <td rowspan="2">语文</td>
+                <td>数学</td>
+                <td>政治</td>
+                <td>英语</td>
+                <td>化学</td>
+                <td rowspan="5">自习</td>
+                <td rowspan="5">休息</td>
+            </tr>
+            <tr>
+                <th>第二节</th>
+                <td colspan="2">生物</td>
+                <td>化学</td>
+                <td>体育</td>
+            </tr>
+            <tr>
+                <th>中午</th>
+                <td colspan="5">休息</td>
+            </tr>
+            <tr>
+                <th>第三节</th>
+                <td colspan="2">数学</td>
+                <td>物理</td>
+                <td>生物</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+                <th>第四节</th>
+                <td>物理</td>
+                <td>化学</td>
+                <td>音乐</td>
+                <td>美术</td>
+                <td>政治</td>
+            </tr>
+        </tbody>
+
     </table>
     <hr>
     <form action="/login" method="post">
-        用户名：<input type="text" name="username" placeholder="用户名" required maxlength="5"><br> 密码：
-        <input type="password" name="password" placeholder="密码" required><br>
-        <button>登录</button><br>
-        <textarea cols="30" rows="10">个人介绍...</textarea><br>
-        <p> 擅长：</p>
-        <select>
-           <option value="语文">语文</option>
-            <option value="数学">数学</option>
-            <option value="英语">英语</option>
-        </select><br>
-        <label for="male">Male</label>
-        <input type="radio" name="sex" id="male" value="male"><br>
-        <label for="female">Female</label>
-        <input type="radio" name="sex" id="female" value="female"><br><br>
-        <input type="submit" value="提交"><br>
-        <label>照片<input name="picture" type="file"></label><br>
-        <button type="reset">重置</button><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" name="username" placeholder="用户名" required maxlength="5"></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="password" placeholder="密码" required><br></td>
+                </tr>
+                <tr>
+                    <td>性别</td>
+                    <td>
+                        <label for="male">男</label>
+                        <input type="radio" name="sex" id="male" value="male" checked="checked">
+                        <label for="female">女</label>
+                        <input type="radio" name="sex" id="female" value="female"></td>
+                </tr>
+                <tr>
+                    <td>籍贯</td>
+                    <td>
+                        <select>
+                          <option value="陕西">陕西</option>
+                          <option value="山西">山西</option>
+                          <option value="江西">江西</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>爱好</td>
+                    <td>
+                        足球
+                        <input type="checkbox" name="football"> 篮球
+                        <input type="checkbox" name="basketball">
+                    </td>
+                </tr>
+                <tr>
+                    <td>个人介绍</td>
+                    <td><textarea cols="30" rows="10">我叫...</textarea></td>
+                </tr>
+                <tr>
+                    <td>个人简历</td>
+                    <td><label><input type="file"></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button>登录</button><button type="reset">重置</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
     </form>
     <hr>
     <form oninput="result.value=Math.pow(a.value,b.value)">
-        <input type="number" name="a" value="10" /> +
-        <input type="number" name="b" value="10" /> =
+        <input type="number" name="a" value="1" /> +
+        <input type="number" name="b" value="2" /> =
         <output name="result"></output>
     </form>
 </body>
